@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RDS - HOme</title>
+  <style>
+    body {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      text-align: center;
+      font-family: 'Segoe UI', sans-serif;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin: 0;
+    }
+    .btn {
+      background: #fff;
+      color: #764ba2;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 25px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    .btn:hover {
+      background: #2ecc71;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <%- include('partials/header') %>
+  <h1>Selamat Datang di RDS -Home</h1>
+  <p>Server Node.js say sekarang sudah bisa baca file HTML!</p>
+  <form action="/greet" method="POST" style="margin-top:  20px;">
+      <input type="text" name="nama" placeholder="Masukan Nama Anda...." required
+            style="padding: 10px; border-radius: 5px; border: none;"">
+            <button type="submit" style="padding: 10px; cursor: pointer; border-radius: 5px; border:none; background-color: #2ecc71; color: white; font-weight: bold;">
+              Sapa Saya
+            </button>     
+  </form>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Sapaan RDS</title>
+    <style>
+      body {
+        font-family: "Segoe UI", sans-serif;
+        background: #f0f2f5;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+      .card {
+        background: white;
+        padding: 40px;
+        border-radius: 20px;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        border-top: 8px solid #764ba2;
+      }
+      h1 {
+        color: #333;
+      }
+      .name {
+        color: #764ba2;
+        font-weight: bold;
+        font-size: 1.5rem;
+      }
+      .btn {
+        margin-top: 20px;
+        display: inline-block;
+        padding: 10px 20px;
+        background: #764ba2;
+        color: white;
+        text-decoration: none;
+        border-radius: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <%- include('partials/header') %>
+    <div class="card">
+      <h1>Halo, <span class="name"><%= nama %></span>! 👋</h1>
+      <p>Data kamu berhasil diproses oleh Template Engine EJS.</p>
+      <p>Status: <strong>Web Dinamis Aktif</strong></p>
+      <a href="/" class="btn">Kembali ke Home</a>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tim RDS</title>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; background: #1a1a2e; color: white; text-align: center; padding: 50px; }
+        .list-container { max-width: 400px; margin: 20px auto; background: #16213e; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); overflow: hidden; }
+        .item { padding: 15px; border-bottom: 1px solid #0f3460; display: flex; justify-content: space-between; align-items: center; }
+        .item:last-child { border-bottom: none; }
+        .role { background: #e94560; padding: 4px 10px; border-radius: 20px; font-size: 0.7rem; font-weight: bold; }
+        .btn-back { margin-top: 30px; display: inline-block; color: #00d2ff; text-decoration: none; font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+  <%- include('partials/header') %>
+    <h1>Daftar Tim RDS 🚀</h1>
+    
+    <div class="list-container">
+        <% anggota.forEach(function(orang) { %>
+            <div class="item">
+                <span><%= orang.nama %></span>
+                <span class="role"><%= orang.peran %></span>
+            </div>
+        <% }); %>
+    </div>
+
+    <a href="/" class="btn-back">← Kembali ke Home</a>
+</body>
+</html>
